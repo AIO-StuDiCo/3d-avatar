@@ -1,15 +1,6 @@
-# Barry Animation
+# 3D Animation
 
-- Maak Timeline Animations in blender met keyframes (I)
-- Export: GLTF, alle Actions als één action (andere optie is activeerbare actions per animatie, bv. open deksel, open midden)
-- De pagina toont `barry-meshy-large.glb` met model controls en AR.
-
-## TODO
-
-- hard edges aangeven / no smoothing in blender
-- animatie hoofdje/armpjes
-- aan komen rijden???
-- simplify vertices even further?
+- ModelViewer plugin toont `coach-waiting.glb`
 
 ## Mixamo
 
