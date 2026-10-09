@@ -1,0 +1,137 @@
+:root {
+    --hr-zwart-blauw:#003340;
+    --hr-donkerrood:#b41e4b;
+    --hr-rood:#d3104c;
+    --hr-room:#f7efe3;
+    --hr-accent-geel:#fcc200;
+    --hr-accent-blauw:#00b0eb;
+    --hr-accent-groen:#3ab7b0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+h1 {
+    margin:0;
+    color:var(--hr-donkerrood);
+}
+
+model-viewer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+section#coach-section {
+    display: flex;
+    height: 60vh;
+    gap: 1.5rem;
+}
+
+section > div {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+}
+
+#chat-window {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+
+#messages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0.25rem 0.5rem 1rem;
+}
+
+.message {
+    max-width: min(80%, 28rem);
+    padding: 0.7rem 0.9rem;
+    border-radius: 1rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.message--coach {
+    align-self: flex-start;
+    border-bottom-left-radius: 0.25rem;
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.message--user {
+    align-self: flex-end;
+    border-bottom-right-radius: 0.25rem;
+    background: var(--hr-donkerrood);
+    color: #fff;
+}
+
+#chat-composer {
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+#chat-composer input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    background: #fff;
+    color: #0f172a;
+    font: inherit;
+}
+
+#chat-composer input:focus-visible,
+#chat-composer button:focus-visible {
+    outline: 2px solid var(--hr-donkerrood);
+    outline-offset: 2px;
+}
+
+#chat-composer button {
+    padding: 0.7rem 1rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--hr-donkerrood);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#chat-composer button:hover {
+    background: #1d4ed8;
+}
+
+@media (max-width: 700px) {
+    section#coach-section {
+        height: auto;
+        min-height: 80vh;
+        flex-direction: column;
+    }
+
+    section#coach-section > div {
+        min-height: 18rem;
+    }
+}

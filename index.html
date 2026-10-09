@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <title>AIO Studico 3D Avatar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <h1>AIO StudieCoach</h1>
+        <p>Demo 3D model</p>
+    </section>
+    <section id="coach-section">
+        <div>
+            <model-viewer src="coach-waiting.glb" 
+                ar ar-modes="webxr scene-viewer quick-look" 
+                camera-controls tone-mapping="neutral" 
+                interaction-prompt="none"
+                shadow-intensity="1" autoplay>
+            </model-viewer>
+        </div>
+        <div id="chat-window">
+            <div id="messages">
+                <div class="message message--coach">Hoi, ik ben je studiecoach! Hoe gaat het vandaag?</div>
+                <div class="message message--user">Goed, ik heb hulp nodig met plannen!</div>
+                <div class="message message--coach">Aha! Even nadenken. Wat voor project wil je plannen?</div>
+            </div>
+            <div id="chat-composer">
+                <input type="text" placeholder="Typ je bericht..." aria-label="Type a message">
+                <button type="button">Versturen</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
