@@ -34,6 +34,10 @@ section#coach-section {
     display: flex;
     height: 60vh;
     gap: 1.5rem;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 }
 
 section > div {
@@ -133,5 +137,9 @@ section > div {
 
     section#coach-section > div {
         min-height: 18rem;
+    }
+
+    section#coach-section > div:first-child {
+        flex: 0 0 18rem;
     }
 }
