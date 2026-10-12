@@ -46,3 +46,8 @@ viewer.addEventListener('load', () => console.log(viewer.availableAnimations));
 - Crossfade between animations: `add animation-crossfade-duration="300"` (milliseconds) 
 - Loop control: `viewer.play({ repetitions: 1 })` plays once. Default is infinite.
 - Pause/resume: `viewer.pause()` and `viewer.play()`.
+
+## TODO
+
+- Add all the animations in blender to the model
+- To correct the AR pose, normalize the model’s orientation in Blender and re-export the GLB, keeping the feet at the origin and the model upright on the ground plane. Apply transforms consistently to the armature and skinned mesh, then test the exported file in the phone’s AR mode.
